@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body { 
+            background-color: rgba(246, 184, 246, 0.844);
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando estudos com <strong>DOM</strong></h1>
+    <p>Testando bagaçeira</p>
+    <h2>Olá esther</h2>
+    <p>Esther é linda</p>
+    <div id="msg" name='msg'>Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('No primeiro "P" está escrito assim: '
+        + p1.innerText)
+        p1.style.color = 'blue'
+        
+        document.write(p1.innerHTML)
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+
+
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerHTML = 'oieeeeeeeee'
+        //d.innerHTML = 'Estou aguardando'
+        //window.document.getElementById('msg').innerText = 'oiee'
+
+
+
+
+
+        // inner text pega so o texto 
+        // inner HTML pega o texto + estilos
+
+
+        // por marca   > getElementsByTagName()
+        // por ID      > getElementsById()
+        // por Nome    > getElementsByName()
+        // por Classe  > getElementsByClassName()
+        // por Seletor > querySelector() e querySelectorAll()
+        // class é pontinho . 
+        // id é hashtag #
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'pink'
+    </script>
 </body>
 </html>
