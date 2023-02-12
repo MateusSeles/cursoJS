@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Sistema de Multas</h1>
-    Nacionalidade: <input type="text" name="txtvel" id="txtvel"> 
+    País de nascimento: <input type="text" name="txtvel" id="txtvel"> 
     <input type="button" value="Verificar" onclick="calcular()">
     <div id="res">
 
@@ -20,9 +20,9 @@
             var res = window.document.querySelector('div#res')
             var vel = txtv.value
             if (vel == 'Brasil') {
-                res.innerHTML += `<p>Brasileiro rapá.</p>`
+                res.innerHTML += `<p>No Brasil você é <strong>Brasileiro</strong>!!!</p>`
             } else {
-            res.innerHTML += `<p>Estrangeiro alemão.</p>`
+            res.innerHTML += `<p>No Brasil você é <strong>Estrangeiro</strong>.</p>`
             }
         }
     </script>
